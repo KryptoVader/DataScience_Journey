@@ -1,0 +1,25 @@
+[[tool.uv.index]]
+url = "file:///C:/DataScience/pytorch"
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128 "
+explicit = true
+
+[project]
+name = "datascience"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.3",
+    "notebook>=7.4.2",
+    "numpy>=2.2.6",
+    "pandas>=2.2.3",
+    "plotly>=6.1.0",
+    "polars>=1.29.0",
+    "scikit-learn>=1.6.1",
+    "scipy>=1.15.3",
+    "seaborn>=0.13.2",
+]
