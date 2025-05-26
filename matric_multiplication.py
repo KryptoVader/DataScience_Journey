@@ -28,30 +28,26 @@ Make sure to:
 """
 Example for Non Square Matrix
 """
-L = [[i for i in range(1,4)], [i for i in range(4,7)], [i for i in range(7,10)], [i for i in range(10,13)]]
-M = [[i for i in range(1,5)], [i for i in range(5,9)], [i for i in range(9,13)]]
+def Nonsquare_matrix_mult(L, M):
+    multi_matrix = [[ 0 for _ in range(len(M[0]))] for _ in range(len(L))]
 
-multi_matrix = [[ 0 for _ in range(4)] for _ in range(4)]
+    for i in range(len(L)):
+        for j in range(len(M[0])):
+            for k in range(len(L[0])):
+                multi_matrix[i][j] += L[i][k] * M[k][j]
 
-for i in range(len(L)):
-    for j in range(len(M[0])):
-        for k in range(len(L[0])):
-            multi_matrix[i][j] += L[i][k] * M[k][j]
-
-print(multi_matrix)
+    return multi_matrix
 
 """
 Example for Sqaure Matrix
 """
 
-L = [[i for i in range(1,4)], [i for i in range(4,7)], [i for i in range(7,10)]]
-M = [[i for i in range(1,4)], [i for i in range(4,7)], [i for i in range(7,10)]]
+def Square_matrix_mult(L, M):
+    multi_matrix = [[ 0 for _ in range(len(L))] for _ in range(len(L))]
 
-multi_matrix = [[ 0 for _ in range(3)] for _ in range(3)]
+    for i in range(len(L)):
+        for j in range(len(M[0])):
+            for k in range(len(L[0])):
+                multi_matrix[i][j] += L[i][k] * M[k][j]
 
-for i in range(len(L)):
-    for j in range(len(M[0])):
-        for k in range(len(L[0])):
-            multi_matrix[i][j] += L[i][k] * M[k][j]
-
-print(multi_matrix)
+    return multi_matrix
