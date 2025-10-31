@@ -1,9 +1,22 @@
-# Questions to ask to understand the data
+## Questions to Ask to Understand the Data
 
-Q1 Whats the size of the data?
-Q2 How the Data Looks? (Use df.random)
-Q3 What is the datatype of columns? (Use df.info)
-Q4 Are there missing values?
-Q5 How does the data look mathematically (Use df.describe)
-Q6 Are there any duplicated values?
-Q7 Correlation of the columns
+1. **What’s the size of the data?**  
+   → Use: `df.shape`
+
+2. **How does the data look?**  
+   → Use: `df.sample(n)` or `df.head()`
+
+3. **What are the datatypes of the columns?**  
+   → Use: `df.info()`
+
+4. **Are there any missing values?**  
+   → Use: `df.isnull().sum()`
+
+5. **How does the data look mathematically?**  
+   → Use: `df.describe()`
+
+6. **Are there any duplicated values?**  
+   → Use: `df.duplicated().sum()`
+
+7. **What’s the correlation between columns?**  
+   → Use: `df.corr()`
